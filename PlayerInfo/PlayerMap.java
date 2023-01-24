@@ -13,6 +13,10 @@ public class PlayerMap {
 		updateMap();
 	}
 
+	public int getCurrentLevel() {
+		return currentLevel + 1;
+	}
+
 	public String toString() {
 		return map;
 	}

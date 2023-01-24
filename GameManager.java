@@ -28,7 +28,8 @@ public class GameManager {
 					printInventory();
 					break;
 				case "stats":
-					
+					playerManager.printStats();
+					break;
 			}
 		}
 	}
