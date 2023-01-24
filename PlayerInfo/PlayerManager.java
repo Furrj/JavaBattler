@@ -20,6 +20,10 @@ public class PlayerManager {
 		return playerMap.getCurrentLevel();
 	}
 
+	public void printMap() {
+		System.out.println(playerMap);
+	}
+
 	public void printStats() {
 		System.out.println("Stats:");
 		System.out.println("Health: " + getHealth());

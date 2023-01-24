@@ -28,7 +28,10 @@ public class GameManager {
 					printInventory();
 					break;
 				case "stats":
-					playerManager.printStats();
+					printStats();
+					break;
+				case "map":
+					playerManager.printMap();
 					break;
 			}
 		}
@@ -39,8 +42,9 @@ public class GameManager {
 		System.out.println("start: Start Game");
 		System.out.println("inv: View Inventory");
 		System.out.println("stats: View Stats");
-		System.out.println("quit: Quit Game");
+		System.out.println("map: View Map");
 		System.out.println("help: View Commands");
+		System.out.println("quit: Quit Game");
 	}
 
 	private void intro() {
@@ -57,6 +61,6 @@ public class GameManager {
 	}
 
 	private void printStats() {
-
+		playerManager.printStats();
 	}
 }
