@@ -1,10 +1,14 @@
 import java.util.Scanner;
+
+import EnemyInfo.EnemyManager;
 import PlayerInfo.PlayerManager;
 
 public class GameManager {
 	private PlayerManager playerManager;
 	private Scanner scanner = new Scanner(System.in);
 	private UserInterface ui = new UserInterface(scanner);
+	private EnemyManager enemyManager = new EnemyManager();
+	private GameLoop gameLoop = new GameLoop(scanner, enemyManager);
 
 	public GameManager(PlayerManager playerManager) {
 		this.playerManager = playerManager;
@@ -19,7 +23,7 @@ public class GameManager {
 					System.out.println("Exiting...");
 					break mainLoop;
 				case "start":
-					startGame();
+					gameLoop.startGame();
 					break;
 				case "help":
 					printCommands();
@@ -50,10 +54,6 @@ public class GameManager {
 	private void intro() {
 		System.out.println("Welcome to JavaBattle");
 		printCommands();
-	}
-
-	private void startGame() {
-		System.out.println("Game has started");
 	}
 
 	private void printInventory() {
