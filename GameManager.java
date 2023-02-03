@@ -8,10 +8,12 @@ public class GameManager {
 	private Scanner scanner = new Scanner(System.in);
 	private UserInterface ui = new UserInterface(scanner);
 	private EnemyManager enemyManager = new EnemyManager();
-	private GameLoop gameLoop = new GameLoop(scanner, enemyManager);
+	private GameLoop gameLoop;
 
 	public GameManager(PlayerManager playerManager) {
 		this.playerManager = playerManager;
+
+		 gameLoop = new GameLoop(ui, playerManager, enemyManager);
 	}
 
 	public void initGame() {

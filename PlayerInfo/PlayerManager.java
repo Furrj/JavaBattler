@@ -3,6 +3,7 @@ package PlayerInfo;
 public class PlayerManager {
 	private PlayerMap playerMap;
 	private int health = 100;
+	private int attack = 5;
 
 	public PlayerManager(PlayerMap playerMap) {
 		this.playerMap = playerMap;
@@ -16,6 +17,14 @@ public class PlayerManager {
 		return health;
 	}
 
+	public void changeHealth(int change) {
+		health += change;
+	}
+
+	public int getAttack() {
+		return attack;
+	}
+
 	public int getCurrentLevel() {
 		return playerMap.getCurrentLevel();
 	}
@@ -27,6 +36,7 @@ public class PlayerManager {
 	public void printStats() {
 		System.out.println("Stats:");
 		System.out.println("Health: " + getHealth());
+		System.out.println("Attack: " + getAttack());
 		System.out.println("Level: " + getCurrentLevel());
 	}
 }
