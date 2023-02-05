@@ -5,6 +5,7 @@ public class PlayerManager {
 	private int health = 100;
 	private int attack = 5;
 	private int playerlevel = 0;
+	private int playerPoints = 0;
 
 	public PlayerManager(PlayerMap playerMap) {
 		this.playerMap = playerMap;
